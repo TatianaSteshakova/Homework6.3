@@ -1,15 +1,16 @@
 ﻿#include <iostream>
+#include <string>
 
 using namespace std;
 
 int main()
 {
-    setlocale(0, "Rus");
+    system("chcp 1251"); // Без этого нормально не выводятся русские слова, setlocale не помогает
 
     char c[100];
 
     cout << "Введите слово: " << endl;
-    cin >> c;
+    cin.getline(c, 99);
 
     char cd;
 
